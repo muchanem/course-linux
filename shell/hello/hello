@@ -1,0 +1,5 @@
+#!/bin/sh
+
+. colors.sh
+
+echo  "${c_yellow} Hello ${c_red} World ${c_reset}" 
