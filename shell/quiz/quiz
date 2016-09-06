@@ -1,0 +1,40 @@
+#!/bin/sh
+
+. ultils.sh
+
+clear
+echo ${SOL_magenta}Welcome to the Pink Fluffy Unicorns quiz$SOL_reset
+
+q1() {
+  ask "What color are the unicorns?" $SOL_yellow
+  if [ "$answer" = pink ]; then
+    return 0 
+  fi
+  return 1 
+}
+
+q2() {
+  ask "Where are they dancing?" $SOL_yellow
+  if [ "$answer" = rainbows ]; then
+    return 0 
+  fi
+  return 1 
+}
+
+q3() {
+  ask "Please use one word to describe the texture of their magical fur:" $SOL_yellow
+  if [ "$answer" = smiles ]; then
+    return 0 
+  fi
+  return 1 
+}
+
+questions="q1\nq2\nq3"
+
+while test -n "$questions"; do
+  q=`echo "$questions" |sort -R | head -1`
+  eval "$q"
+  if [ $? -eq 0 ]; then
+    questions=`echo "$questions" | awk "!/$q/"`
+  fi
+done
