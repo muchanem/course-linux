@@ -1,0 +1,39 @@
+
+#!/bin/sh
+
+
+answers="${C_blue}
+Signs point to yes.\n
+Yes.\n
+Reply hazy, try again.\n
+Without a doubt.\n
+My sources say no.\n
+As I see it, yes.\n
+You may rely on it.\n
+Concentrate and ask again.\n
+Outlook not so good.\n
+It is decidedly so.\n
+Better not tell you now.\n
+Very doubtful.\n
+Yes - definitely.\n
+It is certain.\n
+Cannot predict now.\n
+Most likely.\n
+Ask again later.\n
+My reply is no.\n
+Outlook good.\n
+Don't count on nano"
+
+echo $SOL_yellow
+
+printf '
+Welcome To the Magic8Ball enter you question below
+'
+
+while true; do
+  echo $SOL_red
+  echo -n '>'
+  read question
+  echo $SOL_red
+  echo $answers | sort -R | head -1
+done
