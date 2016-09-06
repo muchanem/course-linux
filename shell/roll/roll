@@ -1,1 +1,55 @@
+#!/bin/sh
+
+
+sides="1\n2\n3\n4\n5\n6"
+
+side1="
+ -------
+|       |
+|   o   |
+|       |
+ -------
+"
+side2="
+ -------
+| o     |
+|       |
+|     o |
+ -------
+"
+side3="
+ -------
+| o     |
+|   o   |
+|     o |
+ -------
+"
+side4="
+ -------
+| o   o |
+|       |
+| o   o |
+ -------
+"
+side5="
+ -------
+| o   o |
+|   o   |
+| o   o |
+ -------
+"
+side6="
+ -------
+| o   o |
+| o   o |
+| o   o |
+ -------
+"
+while true; do 
+  echo $SOL_clear
+  n=`echo $sides |sort -R | head -1`
+  eval side="\$side$n"
+  echo -e `random_color`"$side"
+  read line
+done
 
