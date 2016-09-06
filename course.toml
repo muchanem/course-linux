@@ -1,0 +1,17 @@
+uuid         = "5f53b6b2-5439-4209-8adc-d904cc616ad9"
+name         = "Ubuntu Linux and Shell Scripting"
+short        = "linux"
+license      = "CC0 Public Domain Dedication"
+
+description = """
+This course covers using the Ubuntu Linux system as a desktop
+operating system and as a server from the command line as would be
+used on hosting providers such as Digital Ocean. It includes basic
+shell scripting and security essentials.
+"""
+
+keywords = ["linux", "ubuntu", "shell", "command line"]
+
+[ages]
+  from = 12
+
