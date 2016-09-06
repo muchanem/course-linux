@@ -1,0 +1,10 @@
+#!/bin/sh
+
+. colors.sh
+
+
+echo  "${c_yellow} Hello there what is your name?"
+echo  "${c_red}> ${c_yellow}"
+read name
+echo  $c_reset
+echo "Nice to meet you, $name"
