@@ -1,0 +1,24 @@
+#!/bin/sh
+
+. utils.sh
+
+clear
+ask "Do you like waffles?" $cyellow $cblue
+qwaffles="$answer"
+if [ "$qwaffles" = "yes" ]; then
+  ask "Do you like pancakes?" $cyellow $cblue
+  qpancakes="$answer"
+  if [ "$qpancakes" = "yes" ]; then
+    ask "Do you like french toast?" $cyellow $cblue
+    qfrench="$answer"
+    if [ "$qfrench" = "yes" ]; then
+      echo $cmagenta"Can't wait to get a mouthful."
+    else
+      exit
+    fi
+  else
+    exit
+  fi
+else
+  exit
+fi
